@@ -6,15 +6,18 @@
 import time
 import random
 
+ingredients_list = []
 
-def assemble_sandwich(customer_name, ingredients_list):
-	print('\nNow that I have the ingredients, I can make the sandwich. It will take 2 seconds.')
-	time.sleep(2)
-	print('Okay, I just finished making your random sandwich\n'
-		'It has {}. Hope you like it, {}!'.format(ingredients_list, customer_name)
-		)
+# This defines the steps for the sandwich factory
+def sandwich_factory(customer_name, number_of_ingredients):
+	print('Got {}\'s order! Constructing your special sandwich...'.format(customer_name))
+	generate_recipe(number_of_ingredients)
+	assemble_sandwich(customer_name, ingredients_list)
+	charge_customer()
 
-def generate_recipe(customer_name, number_of_ingredients):
+
+# This generates the random sandwich recipe
+def generate_recipe(number_of_ingredients):
 	# Initialize sandwich options
 	filling_options = [
 		'lettuce', 'bacon', 'tomato', 'spinach', 'mozarella', 'provolone',
@@ -23,7 +26,6 @@ def generate_recipe(customer_name, number_of_ingredients):
 	bread_options = [
 		'white', 'wheat', 'multigrain', 'jalapeno and cheese', 'brioche'
 		]
-	ingredients_list = []
 
 	# Pick the bread
 	print('\t{} was chosen as your bread'.format(random.choice(bread_options)))
@@ -34,15 +36,21 @@ def generate_recipe(customer_name, number_of_ingredients):
 		print('\t{} was picked as a random filling'.format(random_ingredient))
 		ingredients_list.append(random_ingredient)
 
-	assemble_sandwich(customer_name, ingredients_list)
-
-""" Defining the main function, sandwich_factory """
-def sandwich_factory(customer_name, number_of_ingredients):
-	print('Got {}\'s order! Constructing your special sandwich...'.format(customer_name))
-	generate_recipe(customer_name, number_of_ingredients)
+	return ingredients_list
 
 
-""" Using sandwich_factory  """
+# This prints out the sandwich order to the customer
+def assemble_sandwich(customer_name, ingredients_list):
+	print('\nNow that I have the ingredients, I can make the sandwich. It will take 2 seconds.')
+	time.sleep(2)
+	print('Okay, I just finished making your random sandwich\n'
+		'It has {}. Hope you like it, {}!'.format(ingredients_list, customer_name)
+		)
+
+def charge_customer():
+	print('You owe ${}. Come again!'.format(random.randint(0,12)))
+
+# Using sandwich_factory
 sandwich_factory('Ken', 3)
 print('\n...\n')
 time.sleep(1)
@@ -53,4 +61,3 @@ sandwich_factory('Meziah', 5)
 print('\n...\n')
 time.sleep(1)
 sandwich_factory('Michelle', 6)
-
