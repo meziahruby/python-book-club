@@ -1,0 +1,18 @@
+# 9.14 Dice
+#Create a class, die, with attribute sides, default to 6
+from random import randint
+class Die():
+	def __init__(self, rolls=1, sides=6):
+		self.sides = sides
+		self.rolls = rolls
+		
+	def roll_die(self):
+		for apples in range(0,self.rolls):
+			print(randint(1,self.sides))
+kevin_dice = Die(10,6)
+kevin_dice.roll_die()
+kevin_dice2 = Die(10,10)
+kevin_dice2.roll_die()
+kevin_dice3 = Die(10,20)
+kevin_dice3.roll_die()
+#print(randint(1,6))
