@@ -79,3 +79,35 @@
 #         print("\n" 
 #               "Cool, your response has been recorded. Any other reasons?")
     
+
+# import module for following exercises
+from chapter_10_exceptions_module import addition
+
+
+# # 10-6
+# addition(1, 2)
+# addition(3, "2")
+# addition("3", 2)
+# addition("3", "2")
+# addition(3, "two")
+# addition("three", "two")
+
+
+# # 10-7
+# print("Let's add two numbers! Enter 'q' whenever you want to quit.")
+# prompt_first = str("What's the first number to add? ")
+# prompt_second = str("What's the second number to add? ")
+
+# while True:
+#     first_number = input(prompt_first)
+
+#     if first_number == 'q':
+#         break
+
+#     second_number = input(prompt_second)
+
+#     if second_number == 'q':
+#         break
+
+#     addition(first_number, second_number)
+
