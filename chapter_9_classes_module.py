@@ -98,7 +98,7 @@ class Admin(User):
 
 
 class Die():
-    """A number-sided die"""
+    """A number-sided die, with default of 6 sides"""
 
     def __init__(self, sides=6):
         self.sides = sides

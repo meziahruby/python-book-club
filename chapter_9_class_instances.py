@@ -84,12 +84,12 @@ from chapter_9_classes_module import Restaurant, User, IceCreamStand, Admin, Pri
 # Skip 9-15 (looking up python modules in the standard library)
 
 
-# 9-14
-six_sided_die = Die()
-six_sided_die.roll_10_times()
+# # 9-14
+# six_sided_die = Die()
+# six_sided_die.roll_10_times()
 
-ten_sided_die = Die(10)
-ten_sided_die.roll_10_times()
+# ten_sided_die = Die(10)
+# ten_sided_die.roll_10_times()
 
-twenty_sided_die = Die(20)
-twenty_sided_die.roll_10_times()
+# twenty_sided_die = Die(20)
+# twenty_sided_die.roll_10_times()
