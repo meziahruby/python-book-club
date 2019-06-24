@@ -1,3 +1,6 @@
+from random import randint
+
+
 class Restaurant():
     """A simple restaurant"""
 
@@ -22,15 +25,28 @@ class Restaurant():
             self.number_served += increment_number
 
 
+class IceCreamStand(Restaurant):
+    """A simple ice cream stand"""
+
+    def __init__(self, restaurant_name, cuisine_type, flavors, number_served=0):
+        super().__init__(restaurant_name, cuisine_type, number_served)
+        self.flavors = flavors
+
+    def show_flavors(self):
+        print("These are the ice cream stand's available flavors:")
+        for flavor in self.flavors:
+            print(f"-{flavor}")
+
+
 class User():
     """A simple user"""
 
-    def __init__(self, first_name, last_name, age, sex, login_attempts=0):
+    def __init__(self, first_name, last_name, age, sex):
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
         self.sex = sex
-        self.login_attempts = login_attempts
+        self.login_attempts = 0
 
     def describe_user(self):
         if self.sex.lower() == "male":
@@ -51,4 +67,46 @@ class User():
     def reset_login_attempts(self):
         self.login_attempts = 0
 
+
+class Privileges():
+    """A list of privileges"""
+
+    def __init__(self, privileges=[]):
+        self.privileges = privileges
+
+    def show_privileges(self):
+        print("These are the privileges:")
+        for privilege in self.privileges:
+            print(f"-{privilege}")
+
+
+class Admin(User):
+    """A special user, or admin, that has extra privileges"""
+
+    def __init__(self, first_name, last_name, age, sex, user_privileges):
+        super().__init__(first_name, last_name, age, sex)
+        self.user_privileges = Privileges(user_privileges)
+        
+        # For 9-7
+        # self.privileges = privileges
+
+    # For 9-7
+    # def show_privileges(self):
+    #     print("These are the admin's privileges:")
+    #     for privilege in self.privileges:
+    #         print(f"-{privilege}")
+
+
+class Die():
+    """A number-sided die"""
+
+    def __init__(self, sides=6):
+        self.sides = sides
+
+    def roll_die(self):
+        return randint(1, self.sides)
+
+    def roll_10_times(self):
+        for number_of_rolls in range(0, 10):
+            print(self.roll_die())
 

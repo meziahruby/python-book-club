@@ -1,4 +1,6 @@
-from chapter_9_classes_module import Restaurant, User
+# from random import randint
+
+from chapter_9_classes_module import Restaurant, User, IceCreamStand, Admin, Privileges, Die
 
 
 # # 9-1
@@ -48,14 +50,46 @@ from chapter_9_classes_module import Restaurant, User
 # print(restaurant_a.number_served)
 
 
-# 9-5
-user_d = User("Billy", "Bean", 15, "male")
-print(user_d.login_attempts) # 0
+# # 9-5
+# user_d = User("Billy", "Bean", 15, "male")
+# print(user_d.login_attempts) # 0
 
-user_d.increment_login_attempts()
-user_d.increment_login_attempts()
-user_d.increment_login_attempts()
-print(user_d.login_attempts) # 3
+# user_d.increment_login_attempts()
+# user_d.increment_login_attempts()
+# user_d.increment_login_attempts()
+# print(user_d.login_attempts) # 3
 
-user_d.reset_login_attempts()
-print(user_d.login_attempts) # 0
+# user_d.reset_login_attempts()
+# print(user_d.login_attempts) # 0
+
+
+# # 9-6   
+# smitten = IceCreamStand('Smitten', 'American', ['chocolate', 'strawberry'])
+# # print(smitten.flavors)
+# smitten.show_flavors()
+
+
+# #  9-7
+# admin_A = Admin("Big", "Boss", 42, "female", ['can add post', 'can delete post', 'can ban user'])
+# admin_A.show_privileges()
+
+
+# #  9-8
+# admin_B = Admin("Bigger", "Boss", 33, "female", ['can add post', 'can delete post', 'can ban user'])
+# admin_B.user_privileges.show_privileges()
+
+
+# Skip 9-9 (electric car example modification) 
+# Skip 9-10 to 9-12 (importing classes)
+# Skip 9-15 (looking up python modules in the standard library)
+
+
+# 9-14
+six_sided_die = Die()
+six_sided_die.roll_10_times()
+
+ten_sided_die = Die(10)
+ten_sided_die.roll_10_times()
+
+twenty_sided_die = Die(20)
+twenty_sided_die.roll_10_times()
