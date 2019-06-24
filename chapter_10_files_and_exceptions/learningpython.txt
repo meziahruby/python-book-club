@@ -1,0 +1,3 @@
+I am learning about functions in Python.
+I am learning about classes and object-oriented programming in Python.
+I am learning about file and exception handling in Python.
