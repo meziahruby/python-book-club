@@ -1,7 +1,11 @@
 .DS_store
-
 __pycache__/
 
 venv/
 
 .vscode/
+
+# Chapter 10 txt files that get written/appended in chapter_10_file_handler.py
+guest.txt
+guest_book.txt
+programming_poll_results.txt
