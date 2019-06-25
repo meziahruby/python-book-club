@@ -5,7 +5,10 @@ venv/
 
 .vscode/
 
-# Chapter 10 txt files that get written/appended in chapter_10_file_handler.py
+# Chapter 10 files that get written/appended/saved from web in chapter_10_file_handler.py
 guest.txt
 guest_book.txt
 programming_poll_results.txt
+pride_and_prejudice.txt
+alice_in_wonderland.txt
+*.json
