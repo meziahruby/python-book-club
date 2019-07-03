@@ -135,15 +135,15 @@ for filename in filenames:
 
 # 10-10
 # Books sourced from Project Gutenberg: http://www.gutenberg.org/wiki/Main_Page
-filenames = ["alice_in_wonderland.txt", "pride_and_prejudice.txt"]
-search_for_word = "the"
+filenames = ["alicee_in_wonderland.txt", "pride_and_prejudice.txt"]
+search_for_word = "rabbit"
 
 for filename in filenames:
     try:
         with open(filename) as file_object:
             contents = file_object.read()
     except FileNotFoundError:
-        print("Sorry, this book wasn't found.")
+        print(f"Sorry, this book wasn't found.")
     else:
         # Count the number of occurrences of search_for_word in book contents
         search_for_word_count = contents.lower().count(search_for_word)
