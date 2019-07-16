@@ -8,6 +8,7 @@ matplotlib==3.1.1
 mccabe==0.6.1
 numpy==1.16.4
 pygal==2.4.0
+pygal-maps-world==1.0.2
 pylint==2.3.1
 pyparsing==2.4.0
 python-dateutil==2.8.0
