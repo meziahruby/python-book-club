@@ -11,4 +11,5 @@ guest_book.txt
 programming_poll_results.txt
 pride_and_prejudice.txt
 alice_in_wonderland.txt
-*.json
+username.json
+favorite_numbers.json
