@@ -5,6 +5,10 @@ venv/
 
 .vscode/
 
+config.py
+
+.bash_profile.save
+
 # Chapter 10 files that get written/appended/saved from web in chapter_10_file_handler.py
 guest.txt
 guest_book.txt
